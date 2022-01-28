@@ -1,0 +1,11 @@
+GET /api/collections
+  returns the users favourites, wishlist and completed
+
+PUT /api/favourite/game
+PUT /api/favourite/series
+PUT /api/favourite/movie
+  adds an imdbId to the relevant favourite
+
+POST /api/wishlist
+POST /api/completed
+  adds a new entry to the relevant list

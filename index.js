@@ -23,6 +23,9 @@ const connectDB = async () => {
     await mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true });
 
     console.log("Successfully connected to mongodb database");
+    console.log(
+      `If this is running locally then visit: http://localhost:${port} to view`
+    );
 
     return mongoose.connection;
   } catch (err) {
@@ -30,11 +33,11 @@ const connectDB = async () => {
   }
 };
 
-let db = connectDB();
+connectDB();
 
 // endpoints
 app.get("/", (req, res) => {
-  res.send("Hello world");
+  res.json("Hello world");
 });
 
 app.use("/api", apiRoutes);

@@ -1,0 +1,10 @@
+{
+  "id": "123445",
+  "favourite": {
+    "movie": "imdbId",
+    "series": "imdbId",
+    "game": "imdbId"
+  },
+  "wishList": ["imdbId", "imdbId", "imdbId"],
+  "completed": ["imdbId", "imdbId", "imdbId"]
+}
