@@ -5,6 +5,11 @@ let collectionSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  favourite: {
+    game: { type: String },
+    series: { type: String },
+    movie: { type: String },
+  },
   wishList: [String],
   completed: [String],
 });

@@ -23,9 +23,6 @@ const connectDB = async () => {
     await mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true });
 
     console.log("Successfully connected to mongodb database");
-    console.log(
-      `If this is running locally then visit: http://localhost:${port} to view`
-    );
 
     return mongoose.connection;
   } catch (err) {
@@ -43,4 +40,7 @@ app.get("/", (req, res) => {
 app.use("/api", apiRoutes);
 app.listen(port, () => {
   console.log("Running on port: " + port);
+  console.log(
+    `If this is running locally then visit: http://localhost:${port} to view`
+  );
 });
